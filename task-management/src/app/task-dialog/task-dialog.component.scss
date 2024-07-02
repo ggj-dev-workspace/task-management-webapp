@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+
+.tm-dialog {
+    background-color: $tech-primary-light-blue;
+    color: $tech-dark-midnight;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+mat-dialog-content {
+    .tm-dialog-message {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+.tm-button {
+    margin-left: 100px;
+}

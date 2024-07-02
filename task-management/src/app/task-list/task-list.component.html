@@ -1,0 +1,48 @@
+<div class="tm-container">
+    <div class="tm-input">
+        <div class="tm-tk-list">
+            <input [(ngModel)]="createTask" id="taskInput" class="tm-ct-task" name="createTask" type="text"
+                placeholder="Create new task" autofocus />
+            <button class="tm-button" type="button" (click)="createTasks()">
+                <mat-icon class="tm-bt-spacing" aria-hidden="false" fontIcon="note_add">
+                </mat-icon>
+                <span *ngIf="!isUpdate">Add task</span>
+                <span *ngIf="isUpdate">Update task</span>
+            </button>
+        </div>
+    </div>
+    <div *ngIf="tasks.length > 0" class="tm-task-table">
+        <table class="tm-table">
+            <th>
+                Tasks
+            </th>
+            <th>
+                Actions
+            </th>
+            <tr *ngFor="let task of tasks" class="tm-row">
+                <td>{{ task.name }}</td>
+                <td class="td-row">
+                    <button class="tm-button" (click)="updateTask(task)">
+                        <mat-icon class="tm-bt-spacing" aria-hidden="false" fontIcon="edit">
+                        </mat-icon>
+                        <span *ngIf="!isMobile">
+                            Edit
+                        </span>
+                    </button>
+                    <button class="tm-button" (click)="deleteTask(task)">
+                        <mat-icon class="tm-bt-spacing" aria-hidden="false" fontIcon="delete_forever">
+                        </mat-icon>
+                        <span *ngIf="!isMobile">
+                            Delete
+                        </span>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="tasks.length == 0">
+        <div class="tm-empty">
+            You have no tasks!! Please create one
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.tm-home {
+    width: 99vw;
+    background-color: $tech-functional-light-grey;
+    @include for-desktop {
+        height: 450px;
+    }
+}
+.tm-home-header {
+    background-color: $tech-primary-light-blue;
+    margin-top: 50px;
+    font-weight: 500;
+    height: 100px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    @include for-phone-only {
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+
+.tm-home-body {
+    margin-top: 50px;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+    @include for-phone-only {
+        font-size: 20px;
+        padding: 20px;
+    }
+}

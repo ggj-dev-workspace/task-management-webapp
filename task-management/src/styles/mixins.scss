@@ -1,0 +1,13 @@
+@import "variables";
+
+@mixin for-phone-only {
+    @media (max-width: $resolution-mobile) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media (min-width: $resolution-desktop) {
+        @content;
+    }
+}

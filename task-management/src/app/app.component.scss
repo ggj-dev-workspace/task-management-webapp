@@ -1,0 +1,13 @@
+@import "../styles/mixins.scss";
+
+.nav-button {
+    min-width: 49vw !important;
+    padding: 20px !important;
+
+    @include for-phone-only {
+    min-width: 47vw !important;
+    }
+    .tm-nav-title {
+        font-size: 20px;
+    }
+}

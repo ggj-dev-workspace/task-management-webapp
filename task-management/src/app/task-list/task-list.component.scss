@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.tm-container {
+    margin-top: 50px;
+}
+
+.tm-input {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.tm-ct-task {
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 25vw;
+    background-color: $tech-functional-light-grey;
+
+    @include for-phone-only {
+        width: 45vw;
+    }
+}
+
+.tm-table {
+    width: 98vw;
+    max-width: 100%;
+
+    th {
+        border: 1px solid $tech-white;
+        padding: 15px;
+        text-align: left;
+        background-color: $tech-dark-midnight;
+        color: $tech-white;
+        border-radius: 4px;
+    }
+
+    th:nth-child(1) {
+        width: 74vw;
+    }
+
+    th:nth-child(2) {
+        text-align: center;
+    }
+}
+
+.tm-row:nth-child(odd) {
+    background-color: $tech-functional-light-grey;
+}
+
+.tm-row {
+    text-align: left;
+}
+
+.td-row {
+    display: flex;
+    gap: 12px;
+
+    @include for-phone-only {
+        gap: 5px;
+    }
+}
+
+.tm-empty {
+    background-color: $tech-functional-light-grey;
+    width: 100vw;
+    height: 100px;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
